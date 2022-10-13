@@ -44,6 +44,21 @@ const ButtonGroups = React.lazy(() =>
 const Buttons = React.lazy(() => import("./views/buttons/buttons/Buttons"));
 const Charts = React.lazy(() => import("./views/charts/Charts"));
 const Dashboard = React.lazy(() => import("./views/dashboard/Dashboard"));
+
+
+const Piechart = React.lazy(() => import("./views/bankchart/piechart"));
+const Barchart = React.lazy(() => import("./views/bankchart/barchart"));
+const Doughnutchart = React.lazy(() => import("./views/bankchart/doughnutchart"));
+
+const FM = React.lazy(() => import("./views/fm"));
+const FMYear = React.lazy(() => import("./views/fm/year"));
+const FMMonth = React.lazy(() => import("./views/fm/month"));
+const FMFile = React.lazy(() => import("./views/fm/file"));
+const FMView = React.lazy(() => import("./views/fm/view"));
+const FMCreate = React.lazy(() => import("./views/fm/create"));
+const FMUpdate = React.lazy(() => import("./views/fm/update"));
+const FMCreateArchiveType = React.lazy(() => import("./views/fm/createArchiveType"));
+const FMUpdateArchiveType = React.lazy(() => import("./views/fm/updateArchiveType"));
 const CoreUIIcons = React.lazy(() =>
   import("./views/icons/coreui-icons/CoreUIIcons")
 );
@@ -64,6 +79,18 @@ const User = React.lazy(() => import("./views/users/User"));
 const routes = [
   { path: "/", exact: true, name: "Home" },
   { path: "/dashboard", name: "Dashboard", component: Dashboard },
+  { path: "/piechart", name: "Piechart", component: Piechart },
+  { path: "/barchart", name: "Barchart", component: Barchart },
+  { path: "/doughnutchart", name: "Doughnutchart", component: Doughnutchart },
+  { path: "/fm", name: "Archives Management - Folders", component: FM },
+  { path: "/year/:archive_type", name: "Archives Management - Year Folders", component: FMYear },
+  { path: "/month/:archive_type/:archive_year", name: "Archives Management - Month Folders", component: FMMonth },
+  { path: "/file/:archive_type/:archive_year/:archive_month", name: "Archives Management - Archives", component: FMFile },
+  { path: "/view/:archive_type/:archive_year/:archive_month/:file_id", name: "Archives Management - View Archive", component: FMView },
+  { path: "/create/:archive_type", name: "Archives Management - Create Archive", component: FMCreate },
+  { path: "/update/:archive_type/:archive_year/:archive_month/:file_id", name: "Archives Management - Update Archive", component: FMUpdate },
+  { path: "/create-archive-type", name: "Archives Management - Create Folder", component: FMCreateArchiveType },
+  { path: "/update-archive-type/:archive_id", name: "Archives Management - Update Folder", component: FMUpdateArchiveType },
   { path: "/theme", name: "Theme", component: Colors, exact: true },
   { path: "/theme/colors", name: "Colors", component: Colors },
   { path: "/theme/typography", name: "Typography", component: Typography },

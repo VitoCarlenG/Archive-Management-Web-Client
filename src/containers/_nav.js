@@ -14,6 +14,26 @@ const _nav = [
   },
   {
     _tag: "CSidebarNavItem",
+    name: "File Managements",
+    to: "/fm",
+    icon: <CIcon name="cil-speedometer" customClasses="c-sidebar-nav-icon" />,
+    badge: {
+      color: "info",
+      text: "NEW",
+    },
+  },
+  {
+    _tag: "CSidebarNavItem",
+    name: "Bank Chart",
+    to: "/piechart",
+    icon: <CIcon name="cil-speedometer" customClasses="c-sidebar-nav-icon" />,
+    badge: {
+      color: "info",
+      text: "NEW",
+    },
+  },
+  {
+    _tag: "CSidebarNavItem",
     name: "Login User",
     to: "/loginUser",
     icon: <CIcon name="cil-speedometer" customClasses="c-sidebar-nav-icon" />,
